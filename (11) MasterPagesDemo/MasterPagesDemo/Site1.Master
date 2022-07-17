@@ -1,0 +1,46 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="MasterPagesDemo.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="width: 862px">
+    <form id="form1" runat="server">
+        <asp:Image ID="imgHeader" runat="server" Height="176px" ImageUrl="~/images/Hydrangeas.jpg" Width="866px" />
+        <br />
+        <br />
+        <div style="width: 775px; margin-left: 57px">
+            &nbsp;&nbsp;
+            <asp:Menu ID="Menu1" runat="server" BackColor="#FFFBD6" DynamicHorizontalOffset="2" Font-Bold="True" Font-Names="Meiryo UI" Font-Size="X-Large" ForeColor="#990000" Orientation="Horizontal" StaticSubMenuIndent="10px">
+                <DynamicHoverStyle BackColor="#990000" ForeColor="White" />
+                <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                <DynamicMenuStyle BackColor="#FFFBD6" />
+                <DynamicSelectedStyle BackColor="#FFCC66" />
+                <Items>
+                    <asp:MenuItem Text="Home" Value="Home" NavigateUrl="Home.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Profile" Value="Profile" NavigateUrl="Profile.aspx"></asp:MenuItem>
+                    <asp:MenuItem Text="Friends" Value="Friends"></asp:MenuItem>
+                    <asp:MenuItem Text="Birthdays" Value="Birthdays"></asp:MenuItem>
+                    <asp:MenuItem Text="Gallery" Value="Gallery"></asp:MenuItem>
+                    <asp:MenuItem Text="NewsFeed" Value="News Feed"></asp:MenuItem>
+                    <asp:MenuItem Text="About" Value="About"></asp:MenuItem>
+                </Items>
+                <StaticHoverStyle BackColor="#990000" ForeColor="White" />
+                <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                <StaticSelectedStyle BackColor="#FFCC66" />
+            </asp:Menu>
+        </div>
+        <br />
+        <div>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">               
+            </asp:ContentPlaceHolder>
+        </div>
+        <br />
+        Copyright@GoSocial.com - 2022-2023
+    </form>
+</body>
+</html>
